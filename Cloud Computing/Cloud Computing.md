@@ -1,118 +1,236 @@
-# Virtualization and Cloud Computing Tasks
+### **1\. Run Virtual Machines of Different Configurations**
 
-## Task 1: Run Virtual Machines with Different Configurations
-### Aim
-To run and manage virtual machines (VMs) with different configurations and assess the maximum utilization at a time.
+#### **Aim:**
 
-### Procedure
-1. **Install VirtualBox/VMware**:
-   - Download the latest version compatible with Windows 8 or above.
-   - Install the software and set up a user interface.
+To run and manage multiple virtual machines (VMs) with different configurations and determine the number of VMs that can run simultaneously on a host system.
 
-2. **Create a Virtual Machine**:
-   - Open VirtualBox/VMware.
-   - Select *New* → Specify OS type, RAM, storage, and processor cores.
+#### **Procedure:**
 
-3. **Customize VM Configuration**:
-   - Adjust CPU and RAM based on system resources.
-   - Choose dynamic or fixed storage options.
+1.  **Install VirtualBox/VMware:**
+    -   Download and install VirtualBox/VMware on your system.
+    -   Ensure that your system supports virtualization (enable it in the BIOS/UEFI if necessary).
+2.  **Create Virtual Machines:**
+    -   Open the VM software and create a new virtual machine.
+    -   Assign CPU cores, RAM, and storage for each VM based on requirements.
+    -   Install the desired OS on each VM.
+3.  **Run Multiple VMs:**
+    -   Start multiple VMs and monitor the host system's resource usage.
+    -   Note the number of VMs running simultaneously without overloading the host system.
 
-4. **Monitor Maximum Utilization**:
-   - Check system resources using Task Manager while running multiple VMs.
-   - Identify the threshold of CPU/RAM usage.
+#### **Algorithm:**
 
-### Algorithm
-1. Start the VM software.
-2. Create virtual instances with varying configurations.
-3. Monitor host machine resource consumption.
-4. Scale up VMs until performance degradation is observed.
+1.  Check host system specifications.
+2.  Determine the resource requirements for each VM.
+3.  Allocate resources and start VMs one by one.
+4.  Monitor CPU, RAM, and disk usage.
+5.  Record the maximum number of VMs the system can handle.
 
-### Output
-List of configurations and the maximum number of VMs the system can handle.
+* * * * *
 
-### Result
-Efficient management of VMs with optimized resource usage.
+### **2\. Install VirtualBox/VMware with Different OS Flavors**
 
----
+#### **Aim:**
 
-## Task 3: Installing VirtualBox and a C Compiler
-### Aim
-Install VirtualBox and run a C program on a Linux or Windows virtual machine.
+To install VirtualBox/VMware and configure virtual machines with multiple OS flavors (Linux and Windows) on a Windows host.
 
-### Procedure
-1. Install VirtualBox and create a VM with your OS of choice.
-2. **For Linux**:
-   - Install `gcc` using `sudo apt install gcc`.
-   - Write and compile a C program using `gcc`.
-3. **For Windows**:
-   - Install MinGW and configure the environment variables.
-   - Compile a sample C program using `gcc` or an IDE like Code::Blocks.
+#### **Procedure:**
 
-### Algorithm
-1. Install the VM software.
-2. Set up the operating system.
-3. Install the C compiler.
-4. Compile and run the program.
+1.  Download VirtualBox/VMware and install it on your host system.
+2.  Download ISO files for the desired OS flavors (e.g., Ubuntu, Fedora, CentOS, Windows 10).
+3.  Create a new VM for each OS flavor.
+4.  Mount the ISO file for installation and proceed with OS setup.
 
-### Output
-Execution of the C program on the VM.
+#### **Algorithm:**
 
-### Result
-C program successfully compiled and executed.
+1.  Open VM software.
+2.  Create VMs for each OS flavor.
+3.  Attach the respective ISO file and start the VM.
+4.  Complete the OS installation.
+5.  Test the installed OS functionality.
 
----
+* * * * *
 
-## Task 4: Install Google App Engine and Create a Python Web App
-### Aim
-Deploy a simple Python web application using Google App Engine (GAE).
+### **3\. Install a C Compiler in a Virtual Machine**
 
-### Procedure
-1. Install GAE SDK.
-2. Initialize a new project using `gcloud init`.
-3. Create a `main.py` file with a simple Flask-based "Hello World" application.
-4. Deploy the application using `gcloud app deploy`.
+#### **Aim:**
 
-### Algorithm
-1. Install GAE.
-2. Write the Python application.
-3. Deploy and test the app.
+To set up a C compiler in a virtual machine and execute a sample program.
 
-### Output
-A web application hosted on GAE.
+#### **Procedure:**
 
-### Result
-Successfully deployed a Python-based web application.
+1.  Boot into the VM and open the terminal.
+2.  Install GCC using the package manager (`sudo apt-get install gcc` for Ubuntu).
+3.  Write a sample C program (`hello.c`).
+4.  Compile the program (`gcc hello.c -o hello`).
+5.  Execute the program (`./hello`).
 
----
+#### **Algorithm:**
 
-## Task 5: Create a Java Web App on GAE
-### Aim
-Deploy a simple Java web application using Google App Engine.
+1.  Install the OS and start the VM.
+2.  Install GCC or equivalent.
+3.  Write and save a C program.
+4.  Compile and run the program.
 
-### Procedure
-1. Install GAE SDK for Java.
-2. Write a simple servlet-based "Hello World" app.
-3. Deploy it to GAE using Maven or Gradle.
+* * * * *
 
-### Algorithm
-1. Install GAE for Java.
-2. Write the Java application.
-3. Deploy and test the app.
+### **4 & 5. Install Google App Engine for Python and Java**
 
-### Output
-A Java web application hosted on GAE.
+#### **Aim:**
 
-### Result
-Successfully deployed a Java-based web application.
+To set up Google App Engine (GAE) and develop a "Hello World" web application in Python and Java.
 
----
+#### **Procedure:**
 
-## Task 7: Transfer Files Between Virtual Machines
-### Aim
-Transfer files securely between virtual machines.
+1.  Download and install Google Cloud SDK.
+2.  Initialize the SDK using `gcloud init`.
+3.  Write a simple "Hello World" app.
+4.  Deploy the app using `gcloud app deploy`.
+5.  Launch the app in a browser.
 
-### Procedure
-1. Use shared folders in VirtualBox/VMware.
-2. Use SCP (Secure Copy Protocol) for Linux VMs:
-   ```bash
-   scp file.txt user@vm-ip:/path/to/destination
+#### **Algorithm for Python/Java:**
+
+1.  Install required tools (Python/Java, GAE SDK).
+2.  Write the app code.
+3.  Deploy the app to GAE.
+4.  Test the app.
+
+* * * * *
+
+### **6\. Launch Web Applications Using GAE Launcher**
+
+#### **Aim:**
+
+To deploy and launch web applications using Google App Engine Launcher.
+
+#### **Procedure:**
+
+1.  Open the GAE Launcher and configure the app directory.
+2.  Deploy the app to the cloud.
+3.  Launch the app URL in a browser.
+
+* * * * *
+
+### **7\. File Transfer Between VMs**
+
+#### **Aim:**
+
+To transfer files between virtual machines.
+
+#### **Procedure:**
+
+1.  Enable network connectivity between VMs (e.g., shared network or bridged mode).
+2.  Use SCP or file-sharing services to transfer files.
+
+#### **Algorithm:**
+
+1.  Configure network settings.
+2.  Use `scp` or shared folders for file transfer.
+
+* * * * *
+
+### **8 & 12. Create and Execute Your First Docker Container**
+
+#### **Aim:**
+
+To set up Docker and create a basic container.
+
+#### **Procedure:**
+
+1.  Install Docker using the package manager.
+2.  Pull a base image (`docker pull ubuntu`).
+3.  Create and run a container (`docker run -it ubuntu`).
+
+#### **Algorithm:**
+
+1.  Install Docker.
+2.  Pull a container image.
+3.  Create and execute the container.
+
+* * * * *
+
+### **9 & 13. Simulate Cloud Scenarios Using CloudSim**
+
+#### **Aim:**
+
+To simulate cloud scenarios using CloudSim and run scheduling algorithms.
+
+#### **Procedure:**
+
+1.  Set up CloudSim in an IDE (Eclipse or IntelliJ).
+2.  Modify or implement scheduling algorithms in the simulation code.
+3.  Run the simulation.
+
+#### **Algorithm:**
+
+1.  Install CloudSim.
+2.  Define simulation parameters.
+3.  Run the simulation and observe results.
+
+* * * * *
+
+### **10\. Install Hadoop Single Node Cluster**
+
+#### **Aim:**
+
+To set up a Hadoop single-node cluster and run simple applications.
+
+#### **Procedure:**
+
+1.  Install Hadoop and configure `core-site.xml` and `hdfs-site.xml`.
+2.  Format the Hadoop file system.
+3.  Start the Hadoop services.
+4.  Run a sample application like WordCount.
+
+* * * * *
+
+### **11\. Install Docker in VirtualBox**
+
+#### **Aim:**
+
+To install Docker inside a VirtualBox VM.
+
+#### **Procedure:**
+
+1.  Install a compatible Linux OS in the VM.
+2.  Follow Docker installation steps for the OS.
+3.  Test Docker by running a container.
+
+* * * * *
+
+### **14\. Implement a Docker Image**
+
+#### **Aim:**
+
+To build and use a custom Docker image.
+
+#### **Procedure:**
+
+1.  Create a `Dockerfile` with necessary instructions.
+2.  Build the image using `docker build`.
+3.  Run a container using the custom image.
+
+#### **Algorithm:**
+
+1.  Define Dockerfile content.
+2.  Build the image.
+3.  Run and test the container.
+
+* * * * *
+
+### **15\. Hadoop Program for Pi Estimation**
+
+#### **Aim:**
+
+To write a Hadoop program for estimating Pi using Monte Carlo simulation.
+
+#### **Procedure:**
+
+1.  Set up Hadoop.
+2.  Write the Pi Estimation code in Java.
+3.  Run the job using `hadoop jar`.
+
+#### **Algorithm:**
+
+1.  Generate random points.
+2.  Check points within the unit circle.
+3.  Estimate Pi using the ratio of points.
